@@ -1,1 +1,431 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander Stephen Oba | Security Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a2a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://example.com/navy-seal-background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(10, 10, 42, 0.9);
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid #0066cc;
+            position: relative;
+            background-image: url('https://example.com/navy-pattern.png');
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            color: #4d9de0;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 30, 60, 0.9);
+            padding: 15px;
+            border-bottom: 1px solid #0066cc;
+        }
+        
+        .nav a {
+            color: #4d9de0;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background-image: url('https://example.com/navy-seal-operation.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background-position: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 30, 60, 0.6);
+        }
+        
+        .hero-text {
+            position: relative;
+            background: rgba(10, 10, 42, 0.8);
+            padding: 30px;
+            border: 2px solid #0066cc;
+            max-width: 800px;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        .hero-text p {
+            font-size: 1.2em;
+            color: #4d9de0;
+        }
+        
+        .section {
+            padding: 50px 20px;
+            background: rgba(10, 10, 42, 0.8);
+            margin: 30px 0;
+            border-left: 3px solid #0066cc;
+        }
+        
+        .section-title {
+            color: #4d9de0;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: rgba(0, 30, 60, 0.7);
+            border: 1px solid #0066cc;
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #4d9de0;
+        }
+        
+        .skill-card h3 {
+            color: #4d9de0;
+            border-bottom: 1px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .testimonial {
+            background: rgba(0, 30, 60, 0.7);
+            border-left: 3px solid #0066cc;
+            padding: 25px;
+            width: 350px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4em;
+            color: rgba(0, 102, 204, 0.3);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        .author {
+            text-align: right;
+            font-weight: bold;
+            color: #4d9de0;
+            margin-top: 15px;
+        }
+        
+        .cta {
+            background: linear-gradient(90deg, #0066cc, #004d99);
+            padding: 60px 20px;
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            border: 2px solid white;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: white;
+            color: #0066cc;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #0066cc;
+            color: white;
+            font-size: 1em;
+        }
+        
+        input::placeholder, textarea::placeholder {
+            color: #aaa;
+        }
+        
+        button[type="submit"] {
+            background: #0066cc;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            text-transform: uppercase;
+        }
+        
+        button[type="submit"]:hover {
+            background: #004d99;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #0066cc;
+        }
+        
+        .military-badge {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://example.com/navy-seal-badge.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8em;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .nav {
+                flex-wrap: wrap;
+            }
+            
+            .nav a {
+                margin: 5px 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="military-badge"></div>
+            <h1>Stephen Oba</h1>
+            <p class="tagline">Kenya Navy Veteran | Elite Security Consultant</p>
+        </div>
+    </header>
+    
+    <div class="nav">
+        <a href="#about">Operational Profile</a>
+        <a href="#skills">Tactical Capabilities</a>
+        <a href="#testimonials">Mission Reports</a>
+        <a href="#contact">Request Deployment</a>
+    </div>
+    
+    <div class="hero">
+        <div class="hero-text">
+            <h2>MILITARY-GRADE SECURITY SOLUTIONS</h2>
+            <p>Former Kenya Navy Specialist | Head of Security, Two Rivers Mall | Security Consultant</p>
+        </div>
+    </div>
+    
+    <div id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">OPERATIONAL PROFILE</h2>
+            <div style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                <p>Commander Stephen Oba brings <strong>navy-grade security protocols</strong> to civilian environments. Trained in the elite Kenya Navy and battle-tested at Nairobi's premier shopping destination, Two Rivers Mall, Oba operates at a level most security professionals can only aspire to.</p>
+                
+                <p>His approach combines:</p>
+                <ul style="columns: 2; list-style-type: none; padding: 0;">
+                    <li>▶ Naval precision and discipline</li>
+                    <li>▶ Special forces situational awareness</li>
+                    <li>▶ Strategic threat assessment</li>
+                    <li>▶ Tactical response planning</li>
+                    <li>▶ Advanced surveillance techniques</li>
+                    <li>▶ Crisis management expertise</li>
+                </ul>
+                
+                <p style="margin-top: 20px;">When you engage Commander Oba, you're not just getting a security consultant - you're deploying a <strong>strategic asset</strong> that will fortify your operations against all threats.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="skills" class="section" style="background: rgba(0, 30, 60, 0.8);">
+        <div class="container">
+            <h2 class="section-title">TACTICAL CAPABILITIES</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>Naval Surveillance</h3>
+                    <p>Advanced monitoring techniques adapted from shipboard security operations. Can track multiple threats simultaneously like tracking vessels in busy waters.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Strategic Defense</h3>
+                    <p>Creates security perimeters so effective they could protect a naval base. Implements layered defense strategies that anticipate breach attempts before they occur.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Rapid Response</h3>
+                    <p>Response times measured in seconds, not minutes. Trained to neutralize threats with the precision of a special forces operation.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Threat Assessment</h3>
+                    <p>Can identify security vulnerabilities as easily as spotting a periscope in calm waters. Risk analysis that would make naval intelligence proud.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Personnel Training</h3>
+                    <p>Transforms ordinary security staff into a disciplined unit capable of handling any situation with military precision.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Crisis Leadership</h3>
+                    <p>Maintains command presence in high-pressure situations. When others panic, Commander Oba takes control.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title">MISSION REPORTS</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Commander Oba reorganized our entire security operation with the efficiency of a naval drill. Shrinkage dropped 78% in the first month, and our staff now moves with purpose and precision."</p>
+                    <p class="author">- Retail Director, Two Rivers Mall</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"We brought Oba in to assess our vulnerabilities. His report was so thorough it included risks we hadn't even considered yet. His naval background gives him an unparalleled strategic perspective."</p>
+                    <p class="author">- Corporate Security Chief</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"During a security incident, Commander Oba took command of the situation with such authority that even the police followed his lead. It was like watching a naval officer bring order to chaos."</p>
+                    <p class="author">- Event Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cta">
+        <div class="container">
+            <h2>READY TO DEPLOY ELITE SECURITY?</h2>
+            <p style="font-size: 1.2em;">Commander Oba is available for select consulting engagements</p>
+            <a href="#contact" class="btn">REQUEST CONSULTATION</a>
+        </div>
+    </div>
+    
+    <div id="contact" class="section" style="text-align: center; background: rgba(10, 10, 42, 0.9);">
+        <div class="container">
+            <h2 class="section-title">REQUEST DEPLOYMENT</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px; line-height: 1.6;">
+                Submit your security challenge below. All requests are reviewed personally by Commander Oba.
+                <br>For urgent security matters, indicate "Priority Alpha" in your message.
+            </p>
+            
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Organization">
+                <textarea placeholder="Describe Your Security Requirements" rows="5" required></textarea>
+                <button type="submit">SUBMIT REQUEST</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Stephen Oba Security Consulting | All Rights Reserved</p>
+            <p><small>Former Kenya Navy | Current Head of Security, Two Rivers Mall</small></p>
+        </div>
+    </footer>
+</body>
+</html>
